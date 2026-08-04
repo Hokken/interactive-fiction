@@ -37,6 +37,11 @@ pnpm-debug.log*
 .vite/
 coverage/
 
+# Playwright session artifacts
+.playwright-mcp/
+test-results/
+playwright-report/
+
 # Internal working docs — not published
 docs/
 TODO.md
