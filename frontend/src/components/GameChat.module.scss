@@ -1,0 +1,200 @@
+.gameChat {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: transparent;
+  
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #555;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #ff6600;
+    border-radius: 4px;
+  }
+}
+
+.message {
+  margin-bottom: 16px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.author {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.playerMessage {
+  .author {
+    color: #ff8533;
+  }
+  
+  .text {
+    color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 3px solid #ff6600;
+  }
+}
+
+.gameMessage {
+  .author {
+    color: #ff8533;
+  }
+  
+  .text {
+    color: #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 3px solid #22c55e;
+  }
+}
+
+.loadingMessage {
+  .author {
+    color: #ff8533;
+    margin-bottom: 8px;
+  }
+}
+
+.loadingDots {
+  display: flex;
+  gap: 4px;
+  
+  span {
+    width: 8px;
+    height: 8px;
+    background-color: #ff8533;
+    border-radius: 50%;
+    animation: pulse 1.4s infinite;
+    
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 60%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.inputForm {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #555;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 16px;
+  background-color: #1a1a1a;
+  border: 1px solid #555;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  
+  &:focus {
+    outline: none;
+    border-color: #ff6600;
+    background-color: #222;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  &::placeholder {
+    color: #888;
+  }
+}
+
+.sendButton {
+  padding: 12px 24px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  
+  &:hover:not(:disabled) {
+    background-color: #e55a00;
+    transform: translateY(-1px);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.streamingCursor {
+  color: #ff8533;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}

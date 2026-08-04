@@ -1,0 +1,120 @@
+.gameContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 50%, #0f0f0f 100%);
+  color: #e0e0e0;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  
+  h1 {
+    font-size: 48px;
+    margin: 0;
+    background: linear-gradient(135deg, #ff6600, #ff8533, #ffaa66);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 102, 0, 0.8);
+    font-weight: 800;
+    letter-spacing: 2px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
+    font-family: 'Cinzel', 'Times New Roman', serif;
+  }
+}
+
+.subtitle {
+  color: #ff8533;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.navigation {
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gameLayout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.memories {
+  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+  border: 2px solid #555;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  
+  h3 {
+    margin: 0 0 12px 0;
+    color: #ff8533;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    color: #cccccc;
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px solid #555;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.error {
+  background-color: rgba(231, 76, 60, 0.1);
+  border: 2px solid #e74c3c;
+  border-radius: 8px;
+  padding: 16px;
+  
+  p {
+    margin: 0 0 12px 0;
+    color: #e74c3c;
+    font-size: 14px;
+  }
+  
+  button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    
+    &:hover {
+      background-color: #c0392b;
+    }
+  }
+}

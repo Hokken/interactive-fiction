@@ -1,0 +1,41 @@
+services:
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: always
+
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - NODE_ENV=production
+      - QDRANT_URL=http://qdrant:6333
+      # Secrets must be passed via env file or shell environment
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    depends_on:
+      - qdrant
+    volumes:
+      - ./backend/logs:/app/logs
+      - ./backend/data/sessions:/app/data/sessions
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Browser connects to backend at localhost:3001
+        - VITE_BACKEND_URL=http://localhost:3001
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  qdrant_data:

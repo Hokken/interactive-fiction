@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Environment variables — NEVER commit these (they hold live API keys)
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+dist-ssr/
+build/
+*.local
+
+# Runtime data
+backend/logs/
+backend/data/sessions/
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor / OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Caches
+.vite/
+coverage/
+
+# Internal working docs — not published
+docs/
+TODO.md
+
+# AI assistant instruction files and tooling config
+CLAUDE.md
+.claude/
+.gemini/
