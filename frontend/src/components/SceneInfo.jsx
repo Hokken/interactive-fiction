@@ -89,13 +89,13 @@ export default function SceneInfo({ currentScene, messages, isLoading, onSendMes
                     <ul>
                       {availableItems.map((item, index) => (
                         <li key={index} className={styles.item}>
-                          <img 
-                            src={`/src/assets/items/${item.replace('_', '-')}.png`} 
+                          <img
+                            src={`/assets/items/${item.replace(/_/g, '-')}.png`}
                             alt={item}
                             className={styles.itemIcon}
-                            title={item.replace('_', ' ')}
+                            title={item.replace(/_/g, ' ')}
                           />
-                          <span className={styles.itemTooltip}>{item.replace('_', ' ')}</span>
+                          <span className={styles.itemTooltip}>{item.replace(/_/g, ' ')}</span>
                         </li>
                       ))}
                     </ul>

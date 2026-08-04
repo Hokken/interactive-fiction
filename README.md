@@ -98,10 +98,11 @@ npm start         # production
 
 ## Known limitations
 
-- **Production builds are not asset-complete.** Scene and item art is referenced by
-  dev-server paths (`/src/assets/...`), which Vite does not rewrite at build time, so
-  `npm run build` currently produces a version with missing images and audio. Run the dev
-  server to see the game as intended.
+- **Four scene audio tracks are missing.** `scenes.js` references `scene-3.mp3` through
+  `scene-6.mp3`, but those files were never added to the repo, so scenes 3–6 play no
+  background music. Scene art is unaffected.
+- Game assets live in `frontend/public/assets/` and are served verbatim, so they are not
+  content-hashed and will be cached by filename.
 - No automated tests yet.
 - Sessions are stored as local JSON files, so they do not survive a container rebuild
   unless the volume is preserved.

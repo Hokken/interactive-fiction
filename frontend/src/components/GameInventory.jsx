@@ -32,12 +32,12 @@ export default function GameInventory({ inventory, onUseItem }) {
                   type="button"
                   aria-label={`Use ${item}`}
                 >
-                  <img 
-                    src={`/src/assets/items/${item.replace('_', '-')}.png`} 
+                  <img
+                    src={`/assets/items/${item.replace(/_/g, '-')}.png`}
                     alt={item}
                     className={styles.itemIcon}
                   />
-                  <span className={styles.itemName}>{item.replace('_', ' ')}</span>
+                  <span className={styles.itemName}>{item.replace(/_/g, ' ')}</span>
                 </button>
               ))}
             </div>

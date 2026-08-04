@@ -4,8 +4,8 @@ export const scenes = {
 		name: "Dungeon Cell",
 		description:
 			"You are in a damp, cold dungeon cell. Stone walls surround you, and the only light comes from a small barred window. A heavy iron door bars your way.",
-		image: "/src/assets/scenes/scene-1.png",
-		audio: "/src/assets/scenes/scene-1.wav",
+		image: "/assets/scenes/scene-1.png",
+		audio: "/assets/scenes/scene-1.wav",
 		items: ["lockpick", "straw", "torch", "map"],
 		interactiveItems: ["door", "window", "walls"],
 		exits: {
@@ -41,8 +41,8 @@ export const scenes = {
 		name: "Dungeon Corridor",
 		description:
 			"A narrow stone corridor stretches before you, lit by flickering torches on the walls. You can hear dripping water echoing in the distance.",
-		image: "/src/assets/scenes/scene-2.png",
-		audio: "/src/assets/scenes/scene-2.mp3",
+		image: "/assets/scenes/scene-2.png",
+		audio: "/assets/scenes/scene-2.mp3",
 		items: ["rusty_key"],
 		interactiveItems: ["torches"],
 		exits: {
@@ -82,8 +82,8 @@ export const scenes = {
 		name: "Guard Room",
 		description:
 			"An abandoned guard room with a table, two chairs, and scattered playing cards. A weapon rack stands empty against the wall.",
-		image: "/src/assets/scenes/scene-3.png",
-		audio: "/src/assets/scenes/scene-3.mp3",
+		image: "/assets/scenes/scene-3.png",
+		audio: "/assets/scenes/scene-3.mp3",
 		items: ["health_potion", "gold_coins"],
 		interactiveItems: ["table", "weapon_rack"],
 		exits: {
@@ -116,8 +116,8 @@ export const scenes = {
 		name: "Storage Room",
 		description:
 			"A musty storage room filled with crates and barrels. Cobwebs hang from the ceiling, and you can smell old grain and wine.",
-		image: "/src/assets/scenes/scene-4.png",
-		audio: "/src/assets/scenes/scene-4.mp3",
+		image: "/assets/scenes/scene-4.png",
+		audio: "/assets/scenes/scene-4.mp3",
 		items: ["rope", "lantern"],
 		interactiveItems: ["crates", "barrels"],
 		exits: {
@@ -156,8 +156,8 @@ export const scenes = {
 		name: "Escape Chamber",
 		description:
 			"You emerge into a small stone chamber with daylight streaming in through athe top. Fresh air flows through the space, and you can hear birds singing outside. A rusty iron ladder leads up to the exit - your path to freedom!",
-		image: "/src/assets/scenes/scene-6.png",
-		audio: "/src/assets/scenes/scene-5.mp3",
+		image: "/assets/scenes/scene-6.png",
+		audio: "/assets/scenes/scene-5.mp3",
 		items: [],
 		interactiveItems: ["ladder", "exit"],
 		exits: {
@@ -186,8 +186,8 @@ export const scenes = {
 		name: "Freedom!",
 		description:
 			"🎉 Congratulations! You have successfully escaped the dungeon! You emerge into the warm sunlight, breathing fresh air for the first time in what feels like ages. The countryside stretches out before you, filled with possibilities. Your adventure in the dungeon is complete, but who knows what new adventures await you in the world beyond!",
-		image: "/src/assets/scenes/scene-5.png",
-		audio: "/src/assets/scenes/scene-6.mp3",
+		image: "/assets/scenes/scene-5.png",
+		audio: "/assets/scenes/scene-6.mp3",
 		items: [],
 		interactiveItems: [],
 		exits: {},
