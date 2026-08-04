@@ -119,4 +119,4 @@ npm start         # production
 
 ## License
 
-Not yet specified.
+[MIT](LICENSE)
